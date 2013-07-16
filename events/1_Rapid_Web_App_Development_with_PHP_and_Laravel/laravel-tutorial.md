@@ -75,7 +75,7 @@ Here is where we pick up the pace…
 
 ## 7. It's Go Time!
 
-Get ready because we are about to use the awesome power of the Laravel Generators to create the entire skeleton of our app in only a couple commands. It's quite mind blowing.
+Get ready because we are about to use the awesome power of the Laravel Generators to create the entire skeleton of our app in a single command. It's quite mind blowing.
 
 ```php artisan generate:scaffold todo --fields="name:string, completed:boolean"```
 
