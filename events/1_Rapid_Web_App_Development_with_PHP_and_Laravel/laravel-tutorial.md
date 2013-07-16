@@ -73,7 +73,7 @@ Read more about [Routing with Parameters](http://laravel.com/docs/routing#route-
 
 Here is where we pick up the pace…
 
-## It's Go Time!
+## 7. It's Go Time!
 
 Get ready because we are about to use the awesome power of the Laravel Generators to create the entire skeleton of our app in only a couple commands. It's quite mind blowing.
 
@@ -95,7 +95,7 @@ Migrations are powerful and provide a great way to version control changes to yo
 
 Ok, go check out your new web app @ [http://localhost/todos](http://localhost/todos)
 
-## Homework
+## 8. Homework
 
 - Add a 'Clear Completed' button to the ```todos/index.blade.php``` view along with the associated route and controller action.
 - Add a 'Mark Completed' button next to each todo in the ```todos/index.blade.php``` view along with the associated route and controller action.
