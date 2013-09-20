@@ -52,6 +52,52 @@ We will start with this sample page and do some live coding:
 </html>
 ```
 
+Update: Here is the completed demo from the meetup…
+
+```
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Awesome Angular App!</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  </head>
+  <body>
+    <h2>SA Meetup Groups</h2>
+    <div ng-controller="Ctrl">
+      <label>Search: </label><input ng-model="search">
+      <ul>
+        <li ng-repeat="meetup in meetups|filter:search">
+          {{meetup.name}} - {{meetup.members}} <button ng-click="remove($index)">X</button>
+        </li>
+      </ul>
+      <form ng-submit="add()">
+        <label>Name:</label><input ng-model="newName" required><br>
+        <label>Members:</label><input ng-model="newMembers" type="number" required><br>
+        <button>Add Meetup</button>
+      </form>
+    </div>
+    <script>
+      var Ctrl = function ($scope) {
+        $scope.meetups = [
+          { name:"Web Devs", members: 330 },
+          { name: "PHP", members: 100 }
+        ];
+        $scope.add = function () {
+          $scope.meetups.push({
+            name:$scope.newName, members: $scope.newMembers
+          });
+          $scope.newName = "";
+          $scope.newMembers = "";
+        };
+        $scope.remove = function (index) {
+          $scope.meetups.splice(index, 1);
+        };
+      };
+    </script>
+  </body>
+</html>
+```
+
 ## Interesting Reads
 
 - [AngularJS API Reference](http://docs.angularjs.org/api/)
